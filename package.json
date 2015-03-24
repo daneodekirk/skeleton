@@ -1,0 +1,17 @@
+{
+  "name": "skeleton",
+  "description": "basic skeleton for front end development",
+  "repository": "github.com/daneodekirk/skeleton",
+  "version": "1.0.0",
+  "devDependencies": {
+    "clean-css": "*",
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-notify": "*"
+  }
+}
