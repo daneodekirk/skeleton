@@ -46,7 +46,7 @@ module.exports = (grunt) ->
 
     jade:
       options :
-        pretty: true
+        pretty: false
       compile:
         files:
           "index.html": [ "jade/index.jade" ]
