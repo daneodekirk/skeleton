@@ -7,7 +7,7 @@ module.exports = (grunt) ->
     concat :
       dist :
         src : ['js/*']
-        dest : 'app.js'
+        dest : '<%= pkg.name %>.js'
 
     jshint :
       files : [ '<%= concat.dist.src %>']
@@ -27,22 +27,21 @@ module.exports = (grunt) ->
         banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n'
         sourceMap: true
         sourceMapIncludeSources: true
-        # sourceMapIn: 'js/boundless.js.map'
 
       dist:
         files:
-          'app.js': '<%= concat.dist.dest %>'
+          '<%= pkg.name %>.js': '<%= concat.dist.dest %>'
 
     less :
       app:
         options:
           compress: true
           sourceMap: true
-          sourceMapFilename: 'app.css.map'
-          sourceMapURL: 'app.css.map'
+          sourceMapFilename: '<%= pkg.name %>.css.map'
+          sourceMapURL: '<%= pkg.name %>.css.map'
 
         files :
-          'app.css' : 'less/app.less'
+          '<%= pkg.name %>.css' : 'less/<%= pkg.name %>.less'
 
     jade:
       options :
